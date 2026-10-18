@@ -53,6 +53,12 @@ Das oito entregas realizadas, cinco chegaram no prazo e três com atraso. Os doi
 
 A base não permite determinar as causas dos atrasos.
 
+## Acessar no Google Sheets
+
+[Abrir o dashboard](https://docs.google.com/spreadsheets/d/1wVieF7-ckSkA2Pg7CcKtkvkZqD3T5CGjFkUBW7NWuWo/edit?usp=sharing)
+
+O arquivo original está disponível para leitura. Para testar o filtro de região, entre em sua conta Google e selecione **Arquivo → Fazer uma cópia**.
+
 ## Arquivos
 
 - [Visualizar o dashboard em PDF](dashboard-pedidos-entregas-google-sheets-v1.pdf)
