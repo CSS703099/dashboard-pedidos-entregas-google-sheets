@@ -43,6 +43,14 @@ O valor não cancelado inclui pedidos pendentes e não representa receita recebi
 
 A base é fictícia e possui três pedidos por mês. Ela serve para demonstrar as ferramentas e não permite concluir sobre sazonalidade real ou causas dos atrasos.
 
+### Acessar a V2 no Google Sheets
+
+[Abrir o dashboard V2](https://docs.google.com/spreadsheets/d/18UUCz7QF-f9dRynlPsQjH-5tG_YeVlcVZ73v_67FUig/edit?usp=sharing)
+
+Para testar os filtros, entre em sua conta Google e selecione **Arquivo → Fazer uma cópia**.
+
+Na sua cópia, use o seletor do Dashboard e as segmentações de região e mês da aba **Dinamicas**.
+
 ### Arquivos da V2
 
 - [Visualizar o dashboard V2 em PDF](dashboard-pedidos-entregas-google-sheets-v2.pdf)
