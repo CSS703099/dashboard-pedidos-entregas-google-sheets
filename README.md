@@ -1,5 +1,95 @@
 # Dashboard de Pedidos e Entregas — Google Sheets
 
+## V4.1 — Filtros integrados, design e custos
+
+<img width="794" height="986" alt="image" src="https://github.com/user-attachments/assets/773c84b0-3efd-445b-bd91-6cdb08b42bb0" />
+
+A V4.1 aprimora o painel de pedidos e entregas com filtros integrados, identidade visual e análise do resultado após custo dos produtos e frete.
+
+### Melhorias
+
+- Região e período controlam os indicadores, os quatro gráficos e a lista de pedidos atrasados.
+- Base filtrada compartilhada entre as análises.
+- Cabeçalho azul-marinho, gráficos de valores em verde e atrasos em laranja.
+- Cadastro de custos relacionado aos pedidos pelo código, utilizando PROCV.
+- Indicadores separados para resultado dos entregues e estimativa dos pendentes.
+- Apps Script ampliado para verificar também o cadastro de custos.
+
+### Como usar
+
+[Abrir a V4.1 no Google Sheets](https://docs.google.com/spreadsheets/d/1T-XzQsfqmyFssJxcfFaBef077WoF2mDWPYVt75hRq0Q/edit?usp=sharing)
+
+Para explorar os controles, entre em sua conta Google e selecione **Arquivo → Fazer uma cópia**.
+
+No Dashboard:
+
+- **F2:** região.
+- **I2:** data inicial.
+- **I3:** data final.
+
+O período filtra a **data do pedido**. A referência para calcular atrasos permanece em **Listas!A2**, definida como 31/12/2025.
+
+Na cópia, pode ser necessário autorizar o IMPORTRANGE na aba Importacao e a execução do Apps Script. Recarregue a planilha para exibir o menu personalizado.
+
+### Resultados da base completa
+
+Todas as regiões, com pedidos de janeiro a dezembro de 2025:
+
+| Indicador | Resultado |
+|---|---:|
+| Total de pedidos | 36 |
+| Pedidos entregues | 29 |
+| Entregues no prazo | 18 |
+| Entregues com atraso | 11 |
+| Pendentes em atraso | 2 |
+| Pendentes no prazo | 1 |
+| Cancelados | 4 |
+| Valor não cancelado | R$ 30.420,00 |
+| Entregas no prazo | 62,07% |
+| Resultado após custos — entregues | R$ 8.475,00 |
+| Resultado estimado — pendentes | R$ 1.355,00 |
+
+### Definições financeiras
+
+**Resultado após custos = valor do pedido − custo dos produtos − frete pago pela empresa.**
+
+Os custos são fictícios. Para entregues, são simulados como realizados; para pendentes, são estimados.
+
+Neste exercício, os cancelados possuem custo, frete e resultado iguais a zero.
+
+Os resultados não descontam impostos, taxas ou despesas fixas. Não representam lucro líquido nem comprovam recebimento. O valor não cancelado inclui pedidos pendentes.
+
+### Qualidade dos dados
+
+O menu **Qualidade dos dados → Verificar pedidos** confere a base completa, independentemente dos filtros.
+
+Além das regras de pedidos da V4, verifica:
+
+- Registros de custos sem código.
+- Códigos duplicados no cadastro de custos.
+- Custos e fretes vazios, não numéricos ou negativos.
+- Pedidos sem cadastro de custos.
+
+Um custo negativo foi inserido temporariamente, identificado e restaurado. Após nova execução, não foram encontradas ocorrências nas regras aplicadas.
+
+Cada execução substitui o relatório anterior na aba Qualidade. O Dashboard apresenta o resultado da última conferência.
+
+### Arquivos
+
+- [Visualizar o PDF da V4.1](dashboard-pedidos-entregas-google-sheets-v4-1.pdf)
+- [Baixar a cópia complementar em Excel](dashboard-pedidos-entregas-google-sheets-v4-1.xlsx)
+- [Consultar o Apps Script da V4.1](scripts/qualidade-pedidos-v4-1.gs)
+
+### Limitações
+
+- Base fictícia e pequena, sem evidência para determinar causas dos atrasos ou sazonalidade real.
+- Importação dependente do acesso à planilha V2, sem garantia de atualização em tempo real.
+- Conferência manual, sem agendamento; não bloqueia os cálculos.
+- Ausência de ocorrências não garante exatidão dos dados ou correção das fórmulas.
+- Intervalos de dados preparados para até 999 pedidos; gráficos de valores configurados para cinco regiões e doze meses.
+- A versão funcional de referência é o Google Sheets. O Excel não inclui o Apps Script e pode apresentar incompatibilidades nas fórmulas.
+
+---
 ## V4 — Automação e qualidade dos dados
 
 <img width="598" height="638" alt="dashboard-preview-sheets-v4 png  " src="https://github.com/user-attachments/assets/08a194ce-20f0-4893-815a-27bfbc5e9ced" />
