@@ -1,5 +1,61 @@
 # Dashboard de Pedidos e Entregas — Google Sheets
 
+## V2 — Tabelas dinâmicas e análise mensal
+
+<img width="787" height="681" alt="dashboard-preview-sheets-v2 png  " src="https://github.com/user-attachments/assets/76de7849-61ef-4e31-bd48-cc1807d405f3" />
+
+A V2 amplia a base para 36 pedidos fictícios distribuídos pelos 12 meses de 2025, com posição das entregas em 31/12/2025.
+
+### Novos recursos
+
+- Tabela dinâmica de quantidade de pedidos por mês e situação de entrega.
+- Tabela dinâmica de valor dos pedidos não cancelados por região.
+- Tabela dinâmica de valor dos pedidos não cancelados por mês.
+- Segmentações por região e mês na aba Dinamicas.
+- Gráfico de comparação de valores por região.
+- Gráfico de evolução mensal dos valores.
+
+### Como usar os filtros
+
+O seletor no topo do Dashboard controla os cartões e o gráfico de situações de entrega.
+
+As segmentações na aba Dinamicas controlam as tabelas dinâmicas e os dois gráficos de valores. Elas não alteram os cartões calculados por fórmulas.
+
+O gráfico de pendentes em atraso por região mantém a visão geral.
+
+### Resultados da V2 sem filtros
+
+| Indicador | Resultado |
+|---|---:|
+| Total de pedidos | 36 |
+| Pedidos entregues | 29 |
+| Entregues no prazo | 18 |
+| Entregues com atraso | 11 |
+| Pendentes em atraso | 2 |
+| Pendentes no prazo | 1 |
+| Cancelados | 4 |
+| Valor não cancelado | R$ 30.420,00 |
+| Entregas no prazo | 62,07% |
+
+Dezembro apresenta o maior valor de pedidos não cancelados: R$ 4.210,00.
+
+O valor não cancelado inclui pedidos pendentes e não representa receita recebida. A pontualidade considera apenas os pedidos entregues.
+
+A base é fictícia e possui três pedidos por mês. Ela serve para demonstrar as ferramentas e não permite concluir sobre sazonalidade real ou causas dos atrasos.
+
+### Arquivos da V2
+
+- [Visualizar o dashboard V2 em PDF](dashboard-pedidos-entregas-google-sheets-v2.pdf)
+- [Baixar a cópia da V2 em Excel](dashboard-pedidos-entregas-google-sheets-v2.xlsx)
+
+A versão original foi desenvolvida no Google Sheets. A cópia em Excel pode apresentar diferenças de compatibilidade.
+
+---
+
+## V1 — Primeira versão
+
+As informações abaixo documentam a V1, com 12 pedidos e posição em 28/02/2026.
+
 Dashboard desenvolvido no Google Sheets para acompanhar pedidos, pontualidade das entregas e pendências por região.
 
 Projeto de estudo com dados fictícios, criado para meu portfólio de Análise de Dados.
