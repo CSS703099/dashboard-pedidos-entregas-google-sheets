@@ -1,5 +1,68 @@
 # Dashboard de Pedidos e Entregas — Google Sheets
 
+## V3 — Preparação e integração de dados
+
+<img width="778" height="802" alt="dashboard-preview-sheets-v3 png  " src="https://github.com/user-attachments/assets/ff0da5b1-a371-4042-a928-202942fa9073" />
+
+A V3 conecta o dashboard a uma planilha externa e utiliza consultas e fórmulas matriciais para organizar os dados.
+
+### Recursos adicionados
+
+| Ferramenta | Aplicação |
+|---|---|
+| IMPORTRANGE | Importação dos pedidos da planilha V2 |
+| FILTER | Seleção de linhas preenchidas e exibição dos pedidos atrasados |
+| ARRAYFORMULA | Cálculos de atraso, situação de entrega e mês para várias linhas |
+| QUERY | Resumo de valores por região e consulta de pendências |
+| UNIQUE e SORT | Lista de regiões sem repetições e em ordem alfabética |
+
+Os intervalos de importação, cálculos, consultas, tabelas dinâmicas e segmentações foram ampliados até a linha 1000, permitindo até 999 pedidos.
+
+### Lista de pedidos atrasados
+
+O Dashboard apresenta os pedidos pendentes em atraso, ordenados pelo maior número de dias de atraso.
+
+Na posição de 31/12/2025:
+
+- Pedido 2034: Centro-Oeste, R$ 1.900,00 e 14 dias de atraso.
+- Pedido 2035: Norte, R$ 1.320,00 e 5 dias de atraso.
+
+Essa lista apresenta a visão geral e não acompanha os filtros do painel.
+
+### Resultados da base completa
+
+- 36 pedidos, sendo 29 entregues.
+- 18 entregas no prazo e 11 com atraso.
+- 2 pedidos pendentes em atraso e 1 pendente no prazo.
+- 4 pedidos cancelados.
+- R$ 30.420,00 em pedidos não cancelados.
+- 62,07% de pontualidade entre os pedidos entregues.
+
+Os dados são fictícios. O valor não cancelado inclui pedidos pendentes e não representa receita recebida.
+
+### Acessar no Google Sheets
+
+[Abrir o dashboard V3](https://docs.google.com/spreadsheets/d/10C_GGzYiS-WVKeiYyi5KkC4AZKR9gff7aiVBuXJyzZI/edit?usp=sharing)
+
+Para explorar os filtros, entre em sua conta Google e selecione **Arquivo → Fazer uma cópia**.
+
+A importação depende do acesso à planilha de origem. Na cópia, pode ser necessário autorizar a conexão na aba **Importacao**.
+
+### Arquivos da V3
+
+- [Visualizar o dashboard V3 em PDF](dashboard-pedidos-entregas-google-sheets-v3.pdf)
+- [Baixar a cópia complementar em Excel](dashboard-pedidos-entregas-google-sheets-v3.xlsx)
+
+A versão funcional de referência está no Google Sheets. Funções como IMPORTRANGE e QUERY não têm compatibilidade direta com o Excel.
+
+### Validação e atualização
+
+Foi realizada uma alteração temporária de R$ 100,00 na origem, conferida no Dashboard e depois revertida.
+
+A atualização da importação pode levar algum tempo e não deve ser interpretada como atualização em tempo real.
+
+---
+
 ## V2 — Tabelas dinâmicas e análise mensal
 
 <img width="787" height="681" alt="dashboard-preview-sheets-v2 png  " src="https://github.com/user-attachments/assets/76de7849-61ef-4e31-bd48-cc1807d405f3" />
