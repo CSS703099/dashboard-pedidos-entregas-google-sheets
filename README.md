@@ -1,5 +1,93 @@
 # Dashboard de Pedidos e Entregas — Google Sheets
 
+## V4 — Automação e qualidade dos dados
+
+<img width="598" height="638" alt="dashboard-preview-sheets-v4 png  " src="https://github.com/user-attachments/assets/08a194ce-20f0-4893-815a-27bfbc5e9ced" />
+
+A V4 acrescenta uma rotina de verificação dos pedidos com Google Apps Script, um menu personalizado e a exibição do resultado da última conferência no Dashboard.
+
+### Regras verificadas
+
+- Preenchimento dos campos obrigatórios.
+- Códigos de pedido duplicados.
+- Valores numéricos maiores que zero.
+- Validade das datas preenchidas.
+- Previsão ou entrega anterior à data do pedido.
+- Status dentro da lista permitida.
+- Pedidos entregues sem data de entrega.
+- Pedidos não entregues que possuem data de entrega.
+
+### Funcionamento
+
+Na planilha, o menu **Qualidade dos dados → Verificar pedidos** executa a conferência do intervalo `Pedidos!A2:H1000`.
+
+O relatório é registrado na aba **Qualidade**, contendo:
+
+- Data e hora da execução.
+- Linha na aba Pedidos.
+- Código do pedido.
+- Tipo de ocorrência.
+- Detalhe do problema.
+
+Cada execução substitui o relatório anterior. O Dashboard apresenta a data e o resultado da última conferência.
+
+A execução é iniciada manualmente pelo menu. Não existe agendamento nem conferência automática após alterações nos dados.
+
+### Testes realizados
+
+Em uma cópia de teste:
+
+1. Um valor negativo foi identificado como inválido.
+2. Um código repetido foi identificado como duplicado.
+3. Após restaurar os dados, a conferência voltou a indicar 36 pedidos verificados, sem problemas nas regras aplicadas.
+
+### Resultados da base completa
+
+Posição das entregas em **31/12/2025**, sem filtros:
+
+| Indicador | Resultado |
+|---|---:|
+| Total de pedidos | 36 |
+| Pedidos entregues | 29 |
+| Entregues no prazo | 18 |
+| Entregues com atraso | 11 |
+| Pendentes em atraso | 2 |
+| Pendentes no prazo | 1 |
+| Cancelados | 4 |
+| Valor não cancelado | R$ 30.420,00 |
+| Entregas no prazo | 62,07% |
+
+O valor não cancelado inclui pedidos pendentes e não representa receita recebida.
+
+A data da conferência registra quando o script foi executado. Ela é diferente da data de referência utilizada para calcular os atrasos.
+
+### Acessar a V4
+
+[Abrir no Google Sheets](https://docs.google.com/spreadsheets/d/1GVI6mwbHxCTTBOKhNDxEspBJ1y3XHov9yVm4NW5_wvI/edit?usp=sharing)
+
+O original está disponível para leitura. Para explorar os filtros e executar o script, entre em sua conta Google e selecione **Arquivo → Fazer uma cópia**.
+
+Na cópia, pode ser necessário permitir a conexão do IMPORTRANGE na aba **Importacao** e autorizar o script na primeira execução. Recarregue a planilha para exibir o menu personalizado.
+
+### Arquivos da V4
+
+- [Dashboard em PDF](dashboard-pedidos-entregas-google-sheets-v4.pdf)
+- [Cópia complementar em Excel](dashboard-pedidos-entregas-google-sheets-v4.xlsx)
+- [Código do Apps Script](scripts/qualidade-pedidos-v4.gs)
+
+O arquivo `.gs` contém o código utilizado na planilha. Para instalá-lo em outra planilha compatível, acesse **Extensões → Apps Script**, cole o código e salve.
+
+### Limitações
+
+- Os dados são fictícios e não permitem determinar as causas dos atrasos.
+- A ausência de ocorrências não garante que todos os dados estejam corretos: somente as regras descritas são verificadas.
+- A conferência não garante que a importação esteja atualizada.
+- A integração depende do acesso à planilha V2 e pode levar algum tempo para refletir alterações.
+- O relatório representa a última execução e não mantém histórico acumulado.
+- A versão funcional de referência é o Google Sheets. A exportação para Excel não inclui o Apps Script e pode apresentar incompatibilidades com as fórmulas.
+
+---
+
 ## V3 — Preparação e integração de dados
 
 <img width="778" height="802" alt="dashboard-preview-sheets-v3 png  " src="https://github.com/user-attachments/assets/ff0da5b1-a371-4042-a928-202942fa9073" />
