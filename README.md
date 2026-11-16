@@ -76,9 +76,9 @@ Cada execução substitui o relatório anterior na aba Qualidade. O Dashboard ap
 
 ### Arquivos
 
-- [Visualizar o PDF da V4.1](dashboard-pedidos-entregas-google-sheets-v4-1.pdf)
-- [Baixar a cópia complementar em Excel](dashboard-pedidos-entregas-google-sheets-v4-1.xlsx)
-- [Consultar o Apps Script da V4.1](scripts/qualidade-pedidos-v4-1.gs)
+- [Visualizar o PDF da V4.1](dashboard-pedidos-entregas-google-sheets-v4.1.pdf)
+- [Baixar a cópia complementar em Excel](dashboard-pedidos-entregas-google-sheets-v4.1.xlsx)
+- [Consultar o Apps Script da V4.1](scripts/scripts/qualidade-pedidos-v4-1.gs)
 
 ### Limitações
 
